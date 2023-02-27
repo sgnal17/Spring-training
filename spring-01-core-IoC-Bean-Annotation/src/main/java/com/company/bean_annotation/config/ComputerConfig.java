@@ -9,7 +9,7 @@ import com.company.bean_annotation.motherboardFactory.AsusMotherboard;
 import com.company.bean_annotation.motherboardFactory.Motherboard;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
+
 
 
 @Configuration

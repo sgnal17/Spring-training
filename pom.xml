@@ -13,6 +13,7 @@
         <module>spring-01-core-IoC-Bean-Annotation</module>
         <module>spring-02-core-IoC-Stereotype-annotation</module>
         <module>spring-03-Wiring</module>
+        <module>spring-04-Autowiring</module>
 
     </modules>
 

@@ -1,5 +1,7 @@
 package com.cydeo.entity;
 
+import com.cydeo.enums.Gender;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -23,5 +25,8 @@ public class Student { // table name is going to start with lower case -->> stud
     private LocalTime birthTime;
     @Column(columnDefinition = "TIMESTAMP")
     private LocalDateTime birthDateTime;
+
+    @Enumerated(EnumType.STRING) // for enum class.If we don't put EnumType.String it is going to be ordinal (index)
+    private Gender gender;
 
 }

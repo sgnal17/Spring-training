@@ -29,4 +29,8 @@ public class Student { // table name is going to start with lower case -->> stud
     @Enumerated(EnumType.STRING) // for enum class.If we don't put EnumType.String it is going to be ordinal (index)
     private Gender gender;
 
+    @Transient // if we want to keep information but we don't want to see in table we use transient
+    private String city;
+
+
 }

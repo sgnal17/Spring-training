@@ -29,6 +29,9 @@ public class Payment {
     @JoinColumn(name="paymentDetail") // we change the column name
     private PaymentDetail paymentDetail;
 
+    @ManyToOne
+    private Merchant merchant;
+
     public Payment(BigDecimal amount, LocalDate createdDate, Status paymentStatus) {
         this.amount = amount;
         this.createdDate = createdDate;

@@ -1,6 +1,7 @@
 package com.cydeo;
 
 import com.cydeo.repository.DepartmentRepository;
+import com.cydeo.repository.EmployeeRepository;
 import com.cydeo.repository.RegionRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -10,10 +11,12 @@ public class QueryDemo implements CommandLineRunner {
 
     private final RegionRepository regionRepository;
     private final DepartmentRepository departmentRepository;
+    private final EmployeeRepository employeeRepository;
 
-    public QueryDemo(RegionRepository regionRepository, DepartmentRepository departmentRepository) {
+    public QueryDemo(RegionRepository regionRepository, DepartmentRepository departmentRepository, EmployeeRepository employeeRepository) {
         this.regionRepository = regionRepository;
         this.departmentRepository = departmentRepository;
+        this.employeeRepository = employeeRepository;
     }
 
 
@@ -41,5 +44,10 @@ public class QueryDemo implements CommandLineRunner {
         System.out.println("findDepartmentByDivisionEndsWithIgnoreCase"+departmentRepository.findDepartmentByDivisionEndsWithIgnoreCase("ics"));
 
         System.out.println("findDistinctTop3ByDivisionContainingIgnoreCase"+departmentRepository.findDistinctTop3ByDivisionContainingIgnoreCase("Hea"));
+
+        System.out.println("--------------------JPQL------------------------");
+
+        System.out.println("Employee Details with jpql: "+employeeRepository.getEmployeeDetail());
+
     }
 }

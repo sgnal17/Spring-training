@@ -37,7 +37,7 @@ public class Consume_RestTemplate {
     }
 
     @GetMapping("/test")
-    public ResponseEntity<Object> consumePostFromDummyApi(){
+    public ResponseEntity<Object> consumePostFromDummyApi(){ //we don't convert to dto .Whatever we take we show directly
 
         HttpHeaders headers =new HttpHeaders();
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
